@@ -22,7 +22,8 @@ Then(/^on Home page I search for products$/) do |table|
     unless prod.eql?('product')
       @home_page.search_field = prod['product']
       @home_page.search_btn
-      @home_page.sort_bar_element.when_present
+      @search_results.sort_bar_element.when_present
+      @search_results.get_product_names_arr.include?(prod['product']).should == true
       @home_page.goto
     end
   end

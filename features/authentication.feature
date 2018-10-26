@@ -1,13 +1,18 @@
+@smoke_tests
 Feature: Verifications on the authentication page
 
   Background:
     Given I go the the store homepage
 
+
+#  ====== Simple scenario ======
+  @authentication
   Scenario: Check if wrong credentials login is signaled properly
     Then I click the 'sign in' button
     And the 'authentication' page should become visible
 
-
+#   ====== Multiple data verification with scenario outline ======
+  @search
   Scenario Outline: Search for 3 products and check results with examples
     Then I enter the <product> name in the search field
     And I hit the search button
@@ -19,39 +24,35 @@ Feature: Verifications on the authentication page
       | Faded Short Sleeve T-shirts |
       | Blouse                      |
 
-
+#   ====== Multiple data verification with data table ======
+  @search
   Scenario: Search for 3 products and check results with data tables
     Then on Home page I search for products
-
       | product                     |
       | Printed Chiffon Dress       |
       | Faded Short Sleeve T-shirts |
       | Blouse                      |
 
-
-
+  
 
 
 #  ----------------------------------------------------------------------------------------------------------------------
 #  TODO-----------------------------                  Exercises                        ----------------------------------
 #  ----------------------------------------------------------------------------------------------------------------------
 
-#          1. Register a fictive user and check if the entered values are correct
+#          1. Create a scenario that verifies the error messages from the login form
 #
-#          2. Change registration info and check if the information is correct;
+#          2. Change registration info of a demo account and check if the information is correct;
 #
-#          3. Login to the store - goto women products:
+#          3. Login to the store - goto 'women' category:
 #          - check if subcategories are visible
 #          - filter content by subcategories
 #          (identify correctly the things that need to be checked in order to asses if the category filter process is done correctly)
 #
-#          4. Go to womens products and count if the number of products displayed is the same with the strings that says how
+#          4. Go to women's products category and count if the number of products displayed is the same with the strings that says how
 #          many products are displayed
 #
-#          5. Search:
-#          - for a specific product,
-#          - for range of products
-#          Check if the search is done correctly
+#          5. Search for a product and check if all articles from 'Top Sellers' section have: title, description and price
 #
 #          6. Check if filter products by color works as expected
 #
@@ -61,7 +62,7 @@ Feature: Verifications on the authentication page
 #
 #          9. Check if favorites list is filled and updated
 #
-#          10. Check if compare products functionality works as intended
+#          10. Check if selected products are added to the comparison functionality
 
 
 #  ----------------------------------------------------------------------------------------------------------------------
@@ -70,10 +71,7 @@ Feature: Verifications on the authentication page
 #  ----------------------------------------------------------------------------------------------------------------------
 
 
-#                                               -------- 1 ----------
-#  The declarative style describes behavior at a higher level, which I think improves the readability of the feature by
-#  abstracting out the implementation details of the application.
-
+#TODO                                               -------- 1 ----------
 
 #                 -------- Example: Imperative      -       NOT OK!
 #
@@ -145,8 +143,14 @@ Feature: Verifications on the authentication page
 
 
 #TODO                                            -------- 6 ----------
-#                                ========> Use the Rubymine code auto arrange functionality <==========
+#                       ========> Use often the Rubymine code auto arrange functionality <==========
 #      Shortcut keys:
 #
 #        - Windows            -  Ctrl + Alt + L
 #        - Mac                -  ⌥ + ⌘ + L
+
+
+
+#TODO                                            -------- 7 ----------
+#               ========> Keep each scenario independent. The scenarios should run independently, <==========
+#                           ========>  without any dependencies on other scenarios. <==========
