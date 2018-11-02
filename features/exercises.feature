@@ -70,8 +70,46 @@ Feature: Verifications on the authentication page
 #  TODO                     Please follow these instructions before creating de PR for your changes!
 #  ----------------------------------------------------------------------------------------------------------------------
 
+#TODO                                            -------- 1 ----------
+#TODO                =========> Important items to take in consideration for a proper PR <============
 
-#TODO                                               -------- 1 ----------
+#TODO    Coding:
+#TODO    1. Make sure defined web-page controls have their names describing the type of the control, for each variable attach to their name:
+#            _btn - for buttons;
+#            _txt - for text fields;
+#            _area - for text areas;
+#            _select - for select lists / combo-boxes;
+#            _rbtn - for radio buttons;
+#            _check - for check marks;
+#            _link - for links;
+#            _div - for divs;
+#TODO     2. It is recommended to avoid using hard coded parameters (integers, strings).
+
+#TODO     3. Use the DRY technique - Don't Repeat Yourself, by creating reusable code
+#               - Use a Page Object Pattern should be mapped to a Ruby class file, and each method within the class
+#               represents a page object on the page. (Better Choice);
+#
+#               - Centralizes UI coupling — one place to make changes rather than multiple places throughout step
+#               definitions;
+#TODO     4. No sleep statements. It is better to use method or function with a built-in timeout.
+
+#TODO     5. Use often the Rubymine code auto arrange functionality
+#              Shortcut keys:
+#                - Windows            -  Ctrl + Alt + L
+#                - Mac                -  ⌥ + ⌘ + L
+
+#TODO      6. Keep each scenario independent. The scenarios should run independently, without any dependencies on other scenarios.
+
+#TODO    Pushing changes:
+#TODO    1. Do a fetch and a pull from the cloned repository, before committing changes!
+
+#TODO    2. Add comprehensive and clear descriptions for each commit;
+
+
+
+
+#TODO                                           -------- 2 ----------
+#                              =============>   Scenario writing styles  <===============
 
 #                 -------- Example: Imperative      -    Imperative testing or programming is essentially spelling out
 #                                                        with as much detail as necessary how to accomplish something.
@@ -111,27 +149,7 @@ Feature: Verifications on the authentication page
 
 
 
-#TODO                                            -------- 2 ----------
-#          =========> It is recommended to avoid using hard coded parameters (integers, strings). <============
-
-
-
 #TODO                                            -------- 3 ----------
-#           =========>  Use the DRY technique - Don't Repeat Yourself, by creating reusable code  <============
-
-
-#   - Use a Page Object Pattern should be mapped to a Ruby class file, and each method within the class represents a page
-#  object on the page. (Better Choice)
-#
-#   - Centralizes UI coupling — one place to make changes rather than multiple places throughout step definitions
-
-
-
-#TODO                                            -------- 4 ----------
-#       ========> No sleep statements. It is better to use method or function with a built-in timeout. <==========
-
-
-#TODO                                            -------- 5 ----------
 #                                ========> Use Cucumber configuration files. <==========
 
 
@@ -150,15 +168,10 @@ Feature: Verifications on the authentication page
 
 
 
-#TODO                                            -------- 6 ----------
+#TODO                                            -------- 4 ----------
 #                       ========> Use often the Rubymine code auto arrange functionality <==========
 #      Shortcut keys:
 #
 #        - Windows            -  Ctrl + Alt + L
 #        - Mac                -  ⌥ + ⌘ + L
 
-
-
-#TODO                                            -------- 7 ----------
-#               ========> Keep each scenario independent. The scenarios should run independently, <==========
-#                           ========>  without any dependencies on other scenarios. <==========
