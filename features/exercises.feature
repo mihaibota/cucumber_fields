@@ -42,7 +42,7 @@ Feature: Verifications on the authentication page
 
 #          1. Create a scenario that verifies the error messages from the login form
 #
-#          2. Change registration info of a demo account and check if the information is correct;
+#          2. Change registration info of a demo account and check if the data from "My Personal Information" page is correct;
 #
 #          3. Login to the store - goto 'women' category:
 #          - check if subcategories are visible
@@ -73,7 +73,11 @@ Feature: Verifications on the authentication page
 
 #TODO                                               -------- 1 ----------
 
-#                 -------- Example: Imperative      -       NOT OK!
+#                 -------- Example: Imperative      -    Imperative testing or programming is essentially spelling out
+#                                                        with as much detail as necessary how to accomplish something.
+
+#                 ==========>   Avoid this if you can!   <===============
+
 #
 #                  Scenario: User logs in
 #
@@ -90,8 +94,12 @@ Feature: Verifications on the authentication page
 #                    Then I should see "Welcome to the app, John Doe"
 #
 #
-#                 -------- Example: Declarative       -      OK!
+#                 -------- Example: Declarative       -     Declarative testing or programming is only specifying
+#                                                           (or declaring) what needs to be accomplished.
+
+#                 ===========>  Use this more often!  <=================
 #
+
 #                  Scenario: User logs in
 #
 #                    Given I am on the homepage
