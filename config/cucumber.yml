@@ -3,3 +3,4 @@ default: --profile html_report --profile smoke_tests
 html_report: --format progress --format html --out=features_report.html
 smoke_tests: --tags @smoke_tests
 search_tests: --tags @search
+authentification_tests: --tags @authentification_tests
