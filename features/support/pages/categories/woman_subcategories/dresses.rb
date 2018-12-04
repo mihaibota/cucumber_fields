@@ -1,0 +1,2 @@
+module Dresses
+end
