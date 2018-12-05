@@ -9,9 +9,10 @@ Before do
   @home_page = HomePage.new(@driver)
   @search_results = SearchResults.new(@driver)
   @authentication_page = AuthenticationPage.new(@driver)
+  @my_account_page = MyAccountPage.new(@driver)
+  @personal_information_page = PersonalInformation.new(@driver)
 end
 
 After do |scenario|
   @driver.quit
 end
-

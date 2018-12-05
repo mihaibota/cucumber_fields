@@ -14,3 +14,11 @@ Then(/^on the Auth page I enter the wrong credentials and look for the errors$/)
     @authentication_page.error_message_specific_txt.should == element[element.keys[element.keys.count - 1]]
   end
 end
+
+When (/^I log in with a demo account$/) do
+  name = "invalidmail@address.com"
+  password = "defaultpass"
+  @authentication_page.user_email_txt = name
+  @authentication_page.user_password_txt = password
+  @authentication_page.sing_in_btn
+end
