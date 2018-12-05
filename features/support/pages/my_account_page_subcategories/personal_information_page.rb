@@ -18,5 +18,6 @@ class PersonalInformation
   text_field(:user_conf_password_txt, :id => 'confirmation')
   checkbox(:newsletter_check, :id => 'newsletter')
   checkbox(:optin_check, :id => 'optin')
+  element(:succes_message_txt, :css => '#center_column p')
 
 end

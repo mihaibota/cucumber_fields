@@ -10,7 +10,7 @@ Feature: Verifications on the authentication page
     And I go to the my personal information page
     And I store my demo account information data
     And I change the information of my account
-    And I save the changes
-    And I go to the my personal information page
+    Then Saving the changes is possible and succeds
+    When I go to the my personal information page
     Then The changes should be applied
-    And I change back the demo account information
+    Then I succesfully change back the demo account information
