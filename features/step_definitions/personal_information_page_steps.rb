@@ -10,10 +10,10 @@ old_gender_state = false
 old_newsletter_opt = false
 old_optin = false
 #====new fields - used for changing the user information=========
-new_password = Utils::VariableGeneratorUtils.generateRandomPassword(Random.new.rand(5..12))
-new_first_name = Utils::VariableGeneratorUtils.generateRandomName(Random.new.rand(5..12))
-new_last_name = Utils::VariableGeneratorUtils.generateRandomName(Random.new.rand(3..10))
-new_email_text = Utils::VariableGeneratorUtils.generateRandomMailAdress(Random.new.rand(5..10), Random.new.rand(5..10), Random.new.rand(2..3))
+new_password = Utils::VariableGeneratorUtils.generate_random_password(Random.new.rand(5..12))
+new_first_name = Utils::VariableGeneratorUtils.generate_random_name(Random.new.rand(5..12))
+new_last_name = Utils::VariableGeneratorUtils.generate_random_name(Random.new.rand(3..10))
+new_email_text = Utils::VariableGeneratorUtils.generate_random_mail_adress(Random.new.rand(5..10), Random.new.rand(5..10), Random.new.rand(2..3))
 new_birthday = ""
 new_birthmonth = ""
 new_birthyear = ""
