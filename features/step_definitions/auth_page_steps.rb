@@ -15,10 +15,13 @@ Then(/^on the Auth page I enter the wrong credentials and look for the errors$/)
   end
 end
 
-When (/^I log in with a demo account$/) do
-  name = "invalidmail@address.com"
-  password = "defaultpass"
-  @authentication_page.user_email_txt = name
-  @authentication_page.user_password_txt = password
-  @authentication_page.sing_in_btn
+Given(/^I log in with the demo account$/) do
+  file = Utils::TestUtils.open_demo_account_data
+  @authentication_page.goto
+  @authentication_page.login_account(file['mail'], file['password'])
+  if !@authentication_page.demo_account_is_logged?
+    @authentication_page.goto
+    @authentication_page.create_demo_account
+  end
 end
+
