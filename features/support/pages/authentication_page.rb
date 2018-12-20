@@ -73,4 +73,3 @@ class AuthenticationPage
     self.register_btn
   end
 end
-

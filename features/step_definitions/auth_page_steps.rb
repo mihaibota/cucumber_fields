@@ -24,4 +24,3 @@ Given(/^I log in with the demo account$/) do
     @authentication_page.create_demo_account
   end
 end
-
