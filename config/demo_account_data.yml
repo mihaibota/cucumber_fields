@@ -1,0 +1,22 @@
+## ##YAML Template
+mail: "nudauadresa@address.com"
+password: "defaultpass"
+first_name: "Nuconteaza"
+last_name: "Sigurcada"
+day_of_birth: 19
+month_of_birth: 12
+year_of_birth: 1986
+mr_opt: false
+mrs_opt: true
+newsletter_opt: false
+optin_opt: false
+company: "NASA"
+adress1: "StradutaMare"
+adress2: "StradutaMica"
+city: "Manhattan"
+state: "Alabama"
+zip_code: 15423
+country: "United States"
+home_phone: 8004377750
+
+
